@@ -9,9 +9,9 @@ use GuzzleHttp\Client;
 
 class DataController extends Controller
 {
-    protected string $ip = '192.168.178.178';
-    protected string $service = 'ridsaert';
-    protected string $path = '/udp_building';
+    protected string $ip = '20.16.84.167';
+    protected string $service = 'voorbeeld';
+    protected string $path = '/voorbeeld';
 
     public function datasets()
     {
@@ -107,7 +107,7 @@ class DataController extends Controller
             header('Content-Length: ' . filesize($file));
             header("Content-Type: text/plain");
             readfile($file);
-            
+
         } catch (GuzzleException $e) {
             // Handle excpetion
             return view('error/guzzle_error');
